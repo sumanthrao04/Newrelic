@@ -1,0 +1,11 @@
+Introduction to New Relic Query Language (NRQL) and dashboards.
+ *fundamental overview and introduction to New Relic Query Language (NRQL) and dashboards
+ *how to query your data, and create custom dashboards in the New Relic platform
+ *Explain the value New Relic Query Language and New Relic data base
+ *Understand parts of queries and ways to place them together
+ *Write basic NRQL queries and filter data effectively
+ *Apply aggregation functions to perform calculations on queries and add time ranges
+ *Design and build custom dashboards in New Relic using NRQL queries
+ *Understand where you can use NRQL in the New Relic platform
+
+*New Relic Query Language is similar to SQL, and is used to retrieve insights into your application, hosts, and business important activity in New Relic.

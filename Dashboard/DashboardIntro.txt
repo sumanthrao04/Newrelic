@@ -1,0 +1,10 @@
+Visualizing data with dashboards
+  New Relic dashboards is a capability that allows you to observe and interpret the data you frequently collect from your application. In the UI you can build and share tailored charts and visualizations of specific data you want to see from anywhere in the platform. With dashboards you can:
+   Chart all the events and attributes from anywhere across the New Relic platform
+   Drive insight with custom, high-density interactive visualizations
+   Explore and contextualize data with advanced tooltips to monitor what your systems are doing in real time.
+
+
+
+Dashboard Creation
+https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/manage-your-dashboard/

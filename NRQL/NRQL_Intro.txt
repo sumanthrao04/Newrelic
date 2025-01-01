@@ -1,0 +1,74 @@
+Understanding New Relic Query Language (NRQL)
+Foundational knowledge about the New Relic Data Base (NRDB), the types of data reporting to NRDB, what New Relic Query Language (NRQL) is, and how you can use NRQL to query your data in the New Relic Platform.
+
+The New Relic Database
+  *The New Relic database (NRDB) is similar to the roots of a tree, it provides the power, speed, and scalability you need to monitor your performance across your entire landscape quickly and effectively in the New Relic Platform.
+  *NRDB is the database that powers New Relic's Telemetry Data platform. NRDB has allowed us to design intricate dashboards, create alerts, and provide versatile programmability allowing you access to petabytes of metrics, events, logs and trace (MELT) data using New Relic Query Language (NRQL).
+
+
+NRQL allows you to query detailed New Relic data to get insights into the things that matter the most to you. With NRQL you can:
+
+1. Create a chart that provides instant insights to data you frequently need
+
+2. Answer troubleshooting questions
+
+3. Set up NRQL- based alerts
+
+4. Make API queries of New Relic data
+
+You can use NRQL to create simple queries, like request rows of data in a simple form that gives you insights on individual events. You can also use NRQL to run powerful calculations on the data before it is presented to you and look at data overtime.
+
+
+NRQL
+Every NRQL conatins SELECT and FROM
+ example - SELECT Count(Session) FROM Pageview
+         SELECT specifies what portion of a data type you want to query by specifying an attribute or a function
+         FROM is a clause that specifies the data type you wish to query.
+         Aggregator functions are used to filter and aggregate numerical data.
+         Non-aggregator functions are used for non-numerical data in NRQL like querying for an account ID or capturing specific attributes.
+         With NRQL you can control what data points you'd like to see. Depending on your agent, attributes allows you to see agent specific event data in NRDB like Transactions for an APM service or session for browser.
+
+
+Event types in NRDB
+  Events reported by APM
+   Transaction - A transaction is a logical unit of work in a software application. The Transaction event includes information about the app, database calls, the duration of the transaction, and any errors that may occur.
+   https://docs.newrelic.com/attribute-dictionary/?event=Transaction
+
+   TransactionError - Transaction errors occur when a request throws an exception in the code path that was taken to fill that request. The number of transaction errors does not equal the number of transactions, because you can specify whether you want to collect, ignore, or mark errors as expected.
+   https://docs.newrelic.com/attribute-dictionary/?event=TransactionError
+
+
+Events reported by browser monitoring
+  New relic browser monitoring reports event data that's displayed in our UI and that's available for querying and charting.
+  https://docs.newrelic.com/docs/data-apis/understand-data/event-data/events-reported-browser-monitoring/
+
+
+Events reported by mobile monitoring
+  https://docs.newrelic.com/docs/data-apis/understand-data/event-data/events-reported-mobile-monitoring/
+
+Events reported by synthetic monitoring
+  https://docs.newrelic.com/docs/data-apis/understand-data/event-data/events-reported-synthetic-monitoring/
+
+Default infrastructure monitoring data
+ https://docs.newrelic.com/docs/infrastructure/infrastructure-data/default-infra-data/
+
+How NRDB works when we query
+Newrelic has no schemas and no index, when we query it goes to router and then router will route this request to several workers and get the data
+if query is executed recently it will pick up from cache
+https://youtu.be/AAUCkCFgA9A
+
+
+Summary
+New Relic Query Language is a standard  language similar to SQL.
+ NRQL allows you to retrieve event data in the New Relic platform and organize data in a way that makes sense to you.
+ NRQL allows you to create charts for dashboards, set up NRQL-based alerts, and query nearly every type of New Relic telemetry data.
+ Many of the powerful charts in the New Relic platform are build behind queries.
+
+
+question and answer
+what is telemetry Data
+https://last9.io/blog/observability-vs-telemetry-vs-monitoring/
+https://www.logicmonitor.com/blog/what-is-telemetry
+
+What is aggregate-functions
+https://www.geeksforgeeks.org/aggregate-functions-in-sql/
